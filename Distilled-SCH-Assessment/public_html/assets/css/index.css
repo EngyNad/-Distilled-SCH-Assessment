@@ -47,6 +47,10 @@ body {
   padding: 0;
   margin: 0; }
 
+button {
+  border: 0;
+  padding: 5px 10px; }
+
 .area, .randome-area, .home-search-area {
   border: 1px solid #3666B8;
   -webkit-border-radius: 4px;
@@ -67,10 +71,8 @@ body {
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   border-radius: 4px;
-  padding: 5px 10px;
   background-color: #F19030;
   color: #fff;
-  border: 0;
   font-size: 12px; }
 
 .title {
@@ -82,6 +84,10 @@ body {
 header {
   background: #3666B8;
   color: #fff;
-  padding: 10px; }
+  padding: 10px;
+  margin-bottom: 20px; }
+
+.detail-page-data-section {
+  padding-top: 25px; }
 
 /*# sourceMappingURL=index.css.map */

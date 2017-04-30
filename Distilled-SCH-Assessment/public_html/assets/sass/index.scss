@@ -19,10 +19,8 @@ and open the template in the editor.
 
 .button{
     @include border-radius(4px);
-    padding: 5px 10px;
     background-color: $button-color;
     color:#fff;
-    border:0;
     font-size: 12px;}
 
 .title{
@@ -34,7 +32,10 @@ and open the template in the editor.
 header{
     background:$theme-color;
     color:$title-color;
-    padding: 10px;}
+    padding: 10px;
+    margin-bottom:20px;}
 
 .randome-area{ @extend .area;}
 .home-search-area{ @extend .area;}
+
+.detail-page-data-section{padding-top: 25px;}

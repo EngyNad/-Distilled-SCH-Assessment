@@ -11,6 +11,19 @@
             });
         };
 
-    };
+        service.getbeerDetail = function (id) {
+            return service.getRandomeBeer().then(function (response) {
+               var testArray=[];
+               testArray.push(response);
+                var beerData = testArray.filter(function (item) {
+                    return item.data.id === id;
+                })[0];
+                console.log(beerData);
+                return beerData;
+            });
+        };
+
+    }
+    ;
 }
 )();

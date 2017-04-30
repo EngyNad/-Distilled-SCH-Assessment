@@ -22,7 +22,19 @@
                     return BeersService.getRandomeBeer();
                   }]
               }
+            })
+             .state('beerDetail', {
+              url: '/beerDetail/{id}',
+              templateUrl: 'app/components/beerDetail/beerDetail.html',
+              controller: 'BeerDetailController',
+              controllerAs: 'BeerDetailCtrl',
+              resolve: {
+                beerDetails: ['$stateParams','BeersService', function ($stateParams,BeersService) {
+                    return BeersService.getbeerDetail($stateParams.id);
+                  }]
+               }
             });
+;
           
 
     $urlRouterProvider.otherwise('/');
