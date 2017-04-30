@@ -1,0 +1,40 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27-Apr-2017, 17:37:29
+    Author     : Engy
+*/
+@import "modules/all";
+@import "partials/reset";
+.area{ border:1px solid $border-color;
+       @include border-radius(4px);
+       margin: 10px 0;
+       padding: 5px;
+       @include box-shadow(0px, 0px, 9px, 1px, #999);}
+
+.right{float:right !important}
+
+.button{
+    @include border-radius(4px);
+    padding: 5px 10px;
+    background-color: $button-color;
+    color:#fff;
+    border:0;
+    font-size: 12px;}
+
+.title{
+    color:$subtitle-color;
+    padding-bottom: 5px;
+    font-size:14px;
+    font-weight:bold;}
+
+header{
+    background:$theme-color;
+    color:$title-color;
+    padding: 10px;}
+
+.randome-area{ @extend .area;}
+.home-search-area{ @extend .area;}

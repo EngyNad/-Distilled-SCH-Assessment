@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Beer App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    </head>
+    <body ng-app="beer">
+        <div id="app" class="appContainer">
+            <header>
+                <div class="header-title">Distilled SCH Beear Application</div>
+            </header>
+            <ui-view></ui-view> 
+        </div>
+    </body>
+    <script src="assets/lib/angular.min.js"></script>
+    <script src="assets/lib/angular-ui-router.min.js"></script>
+  
+
+    <script src="app/components/beer.module.js"></script>
+    <script src="app/components/beer.routes.js"></script>
+    <script src="app/components/home/home.controller.js"></script>
+    <script src="app/components/home/homeRandomeArea/homeRandomeArea.component.js"></script>
+    <script src="app/components/services/beer.service.js"></script>
+</html>
