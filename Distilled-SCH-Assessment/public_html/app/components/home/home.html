@@ -1,16 +1,27 @@
 <div class="container">
-    
-    <home-randome-area randome-beer="HomeCtrl.randomeBeer"></home-randome-area>
-    
+
+    <home-randome-area randome-beer="HomeCtrl.randomeBeer" brewery-beers="HomeCtrl.breweryBeers" show-search-result="HomeCtrl.showSearchResult"></home-randome-area>
+
     <div class="home-search-area col-md-12">
         <div class="title">Search</div>
-        <div class="col-md-12">
-            <div class="col-md-4"><input type="text"/></div>
+        <div class="col-md-12 search-fields">
+            <div class="col-md-4"><input type="text" ng-model="HomeCtrl.searchName"/></div>
             <div class="col-md-4">
-                <input type="radio" name="beerType" value="beer"/>Beer
+                <input type="radio" name="beerType" value="beer" checked/>Beer
                 <input type="radio" name="beerType" value="brewery"/>Brewery
             </div>
+            <div class="col-md-4">
+                <select name="singleSelect" ng-model="HomeCtrl.sortOptions" >
+                    <option value="name" selected>Name</option>
+                    <option value="abv">Alcohol Percentage</option>
+
+                </select>
+            </div>
+        </div>
+        <div class="col-md-12" >
+
+            <search-result ng-repeat="beer in HomeCtrl.breweryBeers|orderBy:HomeCtrl.sortOptions|filter:{name:HomeCtrl.searchName}" beer="beer"></search-result>
         </div>
     </div>
-    
+
 </div>

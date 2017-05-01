@@ -20,6 +20,9 @@
              resolve: {
                 randomeBeer: ['BeersService', function (BeersService) {
                     return BeersService.getRandomeBeer();
+                  }],
+                 breweryBeers: ['BeersService', function (BeersService) {
+                    return BeersService.getBreweryBeers("0JJzXl");
                   }]
               }
             })
@@ -34,7 +37,7 @@
                   }]
                }
             });
-;
+
           
 
     $urlRouterProvider.otherwise('/');

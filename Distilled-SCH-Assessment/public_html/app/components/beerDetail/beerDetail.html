@@ -6,11 +6,15 @@
             <div>{{BeerDetailCtrl.beerDetails.data.description}}</div>
         </div>
         <div class="detail-page-data-section">
-            <div class="title">{{BeerDetailCtrl.beerDetails.data.style.name}}</div>
+            <div class="subtitle">{{BeerDetailCtrl.beerDetails.data.style.name}}</div>
             <div>{{BeerDetailCtrl.beerDetails.data.style.description}}</div>
         </div>
-        <div class="detail-page-data-section">
-            <div class="title">Year vintage of the beer</div>
+        <div class="detail-page-data-section" >
+            <div class="subtitle">The alcohol by volume of the beer</div>
+             <div>{{BeerDetailCtrl.beerDetails.data.abv}}%</div>
+        </div>
+        <div class="detail-page-data-section" ng-if="BeerDetailCtrl.beerDetails.data.year">
+            <div class="subtitle">Year vintage of the beer</div>
              <div>{{BeerDetailCtrl.beerDetails.data.year}}</div>
         </div>
 

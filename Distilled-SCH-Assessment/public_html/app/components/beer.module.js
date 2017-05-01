@@ -6,7 +6,9 @@
 (function () {
   "use strict";
   //main module
-  angular.module('beer', ['ui.router']);
+  angular.module('beer', ['ui.router'])
+         .constant('ApiPath', 'http://localhost:8085/v2')
+;
         
 
 })();

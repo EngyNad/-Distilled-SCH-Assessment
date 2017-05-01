@@ -51,14 +51,14 @@ button {
   border: 0;
   padding: 5px 10px; }
 
-.area, .randome-area, .home-search-area {
+.area, .randome-area {
   border: 1px solid #3666B8;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   border-radius: 4px;
   margin: 10px 0;
-  padding: 5px;
+  padding: 10px;
   -webkit-box-shadow: 0px 0px 9px 1px #999;
   -moz-box-shadow: 0px 0px 9px 1px #999;
   box-shadow: 0px 0px 9px 1px #999; }
@@ -72,20 +72,55 @@ button {
   -ms-border-radius: 4px;
   border-radius: 4px;
   background-color: #F19030;
+  margin: 10px 0;
   color: #fff;
-  font-size: 12px; }
-
-.title {
-  color: #3666B8;
-  padding-bottom: 5px;
   font-size: 14px;
   font-weight: bold; }
+
+.title, .subtitle {
+  color: #3666B8;
+  padding-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold; }
+
+.subtitle {
+  font-size: 14px; }
 
 header {
   background: #3666B8;
   color: #fff;
   padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
   margin-bottom: 20px; }
+
+.randome-area {
+  cursor: pointer; }
+
+.randome-area-desc {
+  margin-top: 10px; }
+
+.home-search-area {
+  padding-top: 10px; }
+
+.search-fields {
+  padding-bottom: 20px; }
+
+.home-search-result {
+  border-bottom: 1px solid #3666B8;
+  padding: 10px;
+  cursor: pointer; }
+  .home-search-result:first-child {
+    border-top: 1px solid #3666B8; }
+
+.search-result-desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 16px;
+  max-height: 50px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; }
 
 .detail-page-data-section {
   padding-top: 25px; }
