@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Beer Unit Tests</title>
+        <link rel="shortcut icon" type="image/png" href="../public_html/assets/lib/jasmine-2.4.1/jasmine_favicon.png">
+        <link rel="stylesheet" type="text/css" href="../public_html/assets/lib/jasmine-2.4.1/jasmine.css">
+    </head>
+    <body>
+        <!-- Libs -->
+        <script type="text/javascript" src="../public_html/assets/lib/jasmine-2.4.1/jasmine.js"></script>
+        <script type="text/javascript" src="../public_html/assets/lib/jasmine-2.4.1/jasmine-html.js"></script>
+        <script type="text/javascript" src="../public_html/assets/lib/jasmine-2.4.1/boot.js"></script>
+
+        <script type="text/javascript" src="../public_html/assets/lib/angular.min.js"></script>
+        <script type="text/javascript" src="../public_html/assets/lib/angular-ui-router.min.js"></script>
+        <script type="text/javascript" src="../public_html/assets/lib/angular-mocks.js"></script>
+
+        <!-- Source files -->
+        <script src="../public_html/app/components/beer.module.js"></script>
+        <script src="../public_html/app/components/beer.routes.js"></script>
+        <script src="../public_html/app/components/home/home.controller.js"></script>
+        <script src="../public_html/app/components/home/homeRandomeArea/homeRandomeArea.component.js"></script>
+        <script src="../public_html/app/components/home/searchResult/searchResult.component.js"></script>
+        <script src="../public_html/app/components/home/breweryResult/breweryResult.component.js"></script>
+        <script src="../public_html/app/components/beerDetail/beerDetail.controller.js"></script>
+        <script src="../public_html/app/components/services/beer.service.js"></script>
+
+        <!--test spec-->
+        <script src="services/beer.service.spec.js"></script>
+        <script src="home/breweryResult/breweryResult.component.spec.js"></script>
+        <script src="home/searchResult/searchResult.component.spec.js"></script>
+        <script src="beerDetail/beerDetail.controller.spec.js"></script>
+    </body>
+</html>
+
