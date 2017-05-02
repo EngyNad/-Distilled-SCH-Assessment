@@ -1,5 +1,13 @@
 # -Distilled-SCH-Assessment
  Distilled SCH Assessment
+
+if no gulp installed you can install it by using the following command
+
+
+```
+$ npm install gulp -g
+```
+
 ```
 $ npm install gulp --save-dev
 ```

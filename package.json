@@ -1,8 +1,21 @@
 {
-    "name": "Distilled-SCH-Assessment",
-    "version": "1.0.0",
-    "keywords": ["util", "functional", "server", "client", "browser"],
-    "author": "Engy",
-    "contributors": [],
-    "dependencies": {}
+  "name": "Distilled-SCH-Assessment",
+  "version": "1.0.0",
+  "keywords": [
+    "util",
+    "functional",
+    "server",
+    "client",
+    "browser"
+  ],
+  "author": "Engy",
+  "contributors": [],
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0"
+  }
 }

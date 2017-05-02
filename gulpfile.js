@@ -1,14 +1,3 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-var gulp = require('gulp');
-
-gulp.task('default', function () {
-    // place code for your default task here
-});
 
 var MODULE_NAME = 'DistilledAssessment';
 var paths = {
@@ -30,13 +19,13 @@ var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync');
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['browserSync']);
 
 gulp.task('sass', function () {
     gulp.src(paths.sassCss)
             .pipe(sourcemaps.init())
             .pipe(sass())
-            .pipe(autoprefixer())
+//            .pipe(autoprefixer())
             .pipe(sourcemaps.write())
             .pipe(gulp.dest(paths.cssDir))
             .pipe(browserSync.reload({
@@ -46,14 +35,16 @@ gulp.task('sass', function () {
 
 gulp.task('watch', ['browserSync', 'sass'], function () {
     gulp.watch(paths.sassCss, ['sass']);
-    gulp.watch([paths.indexFile, paths.app + "**/" + "*.css", paths.app + "**/" + "*.js", paths.app + "**/" + "*.html"],
+    gulp.watch([paths.indexFile, 
+        paths.app + "**/" + "*.css", 
+        paths.app + "**/" +  "*.js", 
+        paths.app + "**/" + "*.html"],
             browserSync.reload);
 });
 
 gulp.task('browserSync', function () {
     browserSync({
         port: 8000,
-        cors: true,
         server: {
             baseDir: paths.app
         }

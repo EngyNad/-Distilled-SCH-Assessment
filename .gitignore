@@ -1,2 +1,3 @@
-/Distilled-SCH-Assessment/nbproject/private/
-/HTML5Application/nbproject/private/
+/nbproject
+/node_modules
+/public_html/assets/.sass-cache/
