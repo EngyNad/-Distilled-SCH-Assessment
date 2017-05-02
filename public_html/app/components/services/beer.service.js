@@ -6,7 +6,7 @@
     function BeersService($http, ApiPath) {
         var service = this;
         service.getRandomeBeer = function () {
-            return $http.get(ApiPath + '/beer/random?key=b419591eb63fb87a60d059442c0082d4&hasLabels=Y&withBreweries=Y').then(function (response) {
+            return $http.get(ApiPath + '/beer/random?key=08c41ccd2af99540d8a8246c7cd65436&hasLabels=Y&withBreweries=Y').then(function (response) {
                 if (response.data.data.description) {
                     return response.data;
                 } else {
@@ -16,14 +16,14 @@
         };
 
         service.getBeerDetail = function (id) {
-            return $http.get(ApiPath + '/beer/' + id + '?key=b419591eb63fb87a60d059442c0082d4').then(function (response) {
+            return $http.get(ApiPath + '/beer/' + id + '?key=08c41ccd2af99540d8a8246c7cd65436').then(function (response) {
                 return response.data;
             });
         };
 
         service.getBreweryBeers = function (id) {
 
-            return $http.get(ApiPath + '/brewery/' + id + '/beers?key=b419591eb63fb87a60d059442c0082d4').then(function (response) {
+            return $http.get(ApiPath + '/brewery/' + id + '/beers?key=08c41ccd2af99540d8a8246c7cd65436').then(function (response) {
                 return response.data;
             });
         };
@@ -31,7 +31,7 @@
         service.getBreweySet = function () {
 
 
-            return $http.get(ApiPath + '/breweries?key=b419591eb63fb87a60d059442c0082d4&established=2014').then(function (response) {
+            return $http.get(ApiPath + '/breweries?key=08c41ccd2af99540d8a8246c7cd65436&established=2014').then(function (response) {
                 return response.data;
             });
         };
