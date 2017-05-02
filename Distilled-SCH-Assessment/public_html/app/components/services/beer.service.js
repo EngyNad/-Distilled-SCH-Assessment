@@ -15,33 +15,26 @@
             });
         };
 
-        service.getbeerDetail = function (id) {
+        service.getBeerDetail = function (id) {
             return $http.get(ApiPath + '/beer/' + id + '?key=b419591eb63fb87a60d059442c0082d4').then(function (response) {
                 return response.data;
             });
         };
 
-        service.getBreweryBeers = function (id){
+        service.getBreweryBeers = function (id) {
+
             return $http.get(ApiPath + '/brewery/' + id + '/beers?key=b419591eb63fb87a60d059442c0082d4').then(function (response) {
                 return response.data;
             });
         };
-//        var ids = function () {
-//            console.log('starting');
-//            var ids = [];
-//            for (var i = 0; i < 25; i++) {
-//                $http.get(ApiPath + '/beer/random?key=08c41ccd2af99540d8a8246c7cd65436&hasLabels=Y').then(function (response) {
-//                    ids.push(response.data.data.id);
-//                    window.localStorage.ids = JSON.stringify(ids);
-//                });
-//                if(ids.length === 25){
-//                    console.log(ids);
-//                    window.localStorage.ids = JSON.stringify(ids);
-//                    console.log(window.localStorage.ids);
-//                }
-//            }
-//        };
 
+        service.getBreweySet = function () {
+
+
+            return $http.get(ApiPath + '/breweries?key=b419591eb63fb87a60d059442c0082d4&established=2014').then(function (response) {
+                return response.data;
+            });
+        };
     }
     ;
 }

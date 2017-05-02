@@ -5,41 +5,44 @@
  */
 
 (function () {
-  angular.module('beer')
-          .config(routeConfig);
+    angular.module('beer')
+            .config(routeConfig);
 
-  //route configuration
-  routeConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
-  function routeConfig($stateProvider, $urlRouterProvider) {
-    $stateProvider
-            .state('home', {
-              url: '/',
-              templateUrl: 'app/components/home/home.html',
-              controller: 'HomeController',
-              controllerAs: 'HomeCtrl',
-             resolve: {
-                randomeBeer: ['BeersService', function (BeersService) {
-                    return BeersService.getRandomeBeer();
-                  }],
-                 breweryBeers: ['BeersService', function (BeersService) {
-                    return BeersService.getBreweryBeers("0JJzXl");
-                  }]
-              }
-            })
-             .state('beerDetail', {
-              url: '/beerDetail/{id}',
-              templateUrl: 'app/components/beerDetail/beerDetail.html',
-              controller: 'BeerDetailController',
-              controllerAs: 'BeerDetailCtrl',
-              resolve: {
-                beerDetails: ['$stateParams','BeersService', function ($stateParams,BeersService) {
-                    return BeersService.getbeerDetail($stateParams.id);
-                  }]
-               }
-            });
+    //route configuration
+    routeConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
+    function routeConfig($stateProvider, $urlRouterProvider) {
+        $stateProvider
+                .state('home', {
+                    url: '/',
+                    templateUrl: 'app/components/home/home.html',
+                    controller: 'HomeController',
+                    controllerAs: 'HomeCtrl',
+                    resolve: {
+                        randomeBeer: ['BeersService', function (BeersService) {
+                                return BeersService.getRandomeBeer();
+                            }],
+                        breweryBeers: ['BeersService', function (BeersService) {
+                                return BeersService.getBreweryBeers("0JJzXl");
+                            }],
+                        brewerySet: ['BeersService', function (BeersService) {
+                                return BeersService.getBreweySet();
+                            }],
+                    }
+                })
+                .state('beerDetail', {
+                    url: '/beerDetail/{id}',
+                    templateUrl: 'app/components/beerDetail/beerDetail.html',
+                    controller: 'BeerDetailController',
+                    controllerAs: 'BeerDetailCtrl',
+                    resolve: {
+                        beerDetails: ['$stateParams', 'BeersService', function ($stateParams, BeersService) {
+                                return BeersService.getBeerDetail($stateParams.id);
+                            }]
+                    }
+                });
 
-          
 
-    $urlRouterProvider.otherwise('/');
-  }
+
+        $urlRouterProvider.otherwise('/');
+    }
 })();

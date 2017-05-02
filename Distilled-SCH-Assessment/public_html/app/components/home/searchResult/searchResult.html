@@ -1,8 +1,8 @@
-<div class="col-md-12 home-search-result" ui-sref="beerDetail({id:$ctrl.beer.data.id})" >
-   {{$ctrl.beer.labels.length}}
-    <div class="col-md-1"><img class="img-responsive" src="{{$ctrl.beer.labels.icon}}"/></div>
+<div class="col-md-12 home-search-result" ui-sref="beerDetail({id:$ctrl.beer.id})" >
+
+    <div class="col-md-1"><img class="img-responsive" ng-src="{{$ctrl.beer.labels.icon}}"/></div>
     <div class="col-md-11">
-        <div class="col-md-12 subtitle">{{$ctrl.beer.nameDisplay}}</div>
+        <div class="col-md-12 subtitle">{{$ctrl.beer.name}}</div>
         <div class="col-md-12 search-result-desc">{{$ctrl.beer.description}}</div>
         <div class="col-md-12 subtitle" ng-if="$ctrl.beer.abv">{{$ctrl.beer.abv}}% Alcohol</div>
     </div>

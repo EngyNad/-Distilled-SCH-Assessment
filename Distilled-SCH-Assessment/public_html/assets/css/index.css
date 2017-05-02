@@ -106,12 +106,21 @@ header {
 .search-fields {
   padding-bottom: 20px; }
 
-.home-search-result {
+.home-search-result, .home-brewery-result {
   border-bottom: 1px solid #3666B8;
   padding: 10px;
   cursor: pointer; }
-  .home-search-result:first-child {
+  .home-search-result:first-child, .home-brewery-result:first-child {
     border-top: 1px solid #3666B8; }
+
+.home-brewery-result {
+  cursor: default; }
+
+.search-field {
+  margin-bottom: 10px; }
+
+.search-fields-radio {
+  border: 1px solid #3666B8; }
 
 .search-result-desc {
   overflow: hidden;
