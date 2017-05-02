@@ -1,4 +1,4 @@
-# Distilled-SCH-Assessment
+# Distilled-SCH Assessment
 
 Requirements:
     * node -v ^v6
