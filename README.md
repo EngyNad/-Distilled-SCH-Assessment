@@ -1,4 +1,4 @@
-# -Distilled-SCH-Assessment
+# Distilled-SCH-Assessment
 
 Requirements:
     * node -v ^v6
@@ -23,5 +23,5 @@ Preparation:
 Gulp commands:
 ```
     $ gulp #default run server
-    * gulp watch #start development
-``````
+    $ gulp watch #start development
+```
